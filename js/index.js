@@ -38,10 +38,10 @@ function displaySite() {
             <td>${i}</td>
             <td>${siteInfo[i].name}</td>
             <td>
-                <a class="btn visit-btn" href="${siteInfo[i].url}" target="_blank">
+                <button class="btn visit-btn" onclick="visitSite('${siteInfo[i].url}')">
                     <i class="fa-solid fa-eye pe-2"></i>
                     Visit
-                </a>
+                </button>
             </td>
             <td class="p-2">
             <button class="btn btn-danger" onclick="deleteSite(${i})">
@@ -63,7 +63,7 @@ function deleteSite(deletedIndex) {
 }
 
 function visitSite(vistedUrl) {
-    siteUrlInput.value = siteInfo[vistedUrl].url;
+    window.open(vistedUrl, "_blank")
 }
 
 
