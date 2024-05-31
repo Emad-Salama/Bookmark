@@ -38,10 +38,10 @@ function displaySite() {
             <td>${i}</td>
             <td>${siteInfo[i].name}</td>
             <td>
-                <button class="btn visit-btn" onclick="visitSite(${siteInfo[i].url})">
+                <a class="btn visit-btn" href="${siteInfo[i].url}">
                     <i class="fa-solid fa-eye pe-2"></i>
                     Visit
-                </button>
+                </a>
             </td>
             <td class="p-2">
             <button class="btn btn-danger" onclick="deleteSite(${i})">
