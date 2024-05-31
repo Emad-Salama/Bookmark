@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Righteous&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section class="py-5 ">
+        <div class="container d-flex flex-column justify-content-center ">
+            <header class="text-center">
+                <h1>
+                    Bookmarker
+                </h1>
+            </header>
+            <div class="bookmark-card border-start-0 border-end-0">
+                <h2 class="text-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="mt-4">
+                    <div class=" mb-4">
+                        <div class="text-black">
+                            <i class="fa-solid fa-book-bookmark pe-2"></i>
+                            <label class="pb-2" for="siteName">Site Name</label>
+                        </div>
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        id="siteName" 
+                        oninput="validateInput(this)"
+                        placeholder="Bookmark Name">
+                        <span class="text-danger d-none">Site Name must be (3-10) characters</span>
+                    </div>
+                    <div class="mb-4">
+                        <div class="text-black">
+                            <i class="fa-solid fa-link pe-2"></i>
+                            <label class="pb-2" for="siteUrl">Site URL</label>
+                        </div>
+                        <input 
+                        type="url" 
+                        class="form-control" 
+                        id="siteUrl" 
+                        oninput="validateInput(this)"
+                        placeholder="Website URL">
+                        <span class="text-danger d-none">Enter a valid URL</span>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn my-btn me-3" onclick="addSite()">Submit</button>
+                    </div>                  
+                </div>
+            </div>
+            <table class="table text-center bg-light mt-4" >
+                <thead>
+                    <tr class="text-capitalize">
+                        <th class="p-2">index</th>
+                        <th class="p-2">Website Name</th>
+                        <th class="p-2">Visit</th>
+                        <th class="p-2">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

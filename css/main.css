@@ -1,0 +1,98 @@
+body {
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+section {
+    background-color: #f7ecde;
+    min-height: 100vh;
+}
+
+section h1 {
+    font-family: "Pacifico", cursive;
+    color: rgb(53, 46, 40);
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    display: inline;
+    z-index: 1;
+}
+section h1::before {
+    content: "";
+    position: absolute;
+    background-color: #fec260;
+    left: 0;
+    bottom:10%;
+    height: 25%;
+    width: 100%;
+    transition: height 0.35s;
+    z-index: -1;
+}
+h1:hover::before {
+    height: 50%;
+}
+
+section .bookmark-card {
+    padding: 24px 16px;
+    margin-top: 48px;
+    border: 2px dotted #352e28;
+}
+section .bookmark-card h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bookmark-card .text-black {
+    color: rgb(33, 37, 41);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+
+.my-btn {
+    cursor: pointer;
+    color: white;
+    background-color: #d1512d;
+    border-color:  #d1512d;
+    padding: 6px 48px;
+    transition: all 0.3s;
+}
+
+.my-btn:hover {
+    color: white;
+    background-color: #bb4120;
+    border-color:  #a03315;
+} 
+
+
+.visit-btn {
+    color: white;
+    background-color: #9eb23b;
+    border-color:  #9eb23b;
+}
+.visit-btn:hover {
+    color: white;
+    background-color: #8a9e23;
+    border-color:  #6e8018;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
