@@ -38,7 +38,7 @@ function displaySite() {
             <td>${i}</td>
             <td>${siteInfo[i].name}</td>
             <td>
-                <a class="btn visit-btn" href="${siteInfo[i].url}">
+                <a class="btn visit-btn" href="${siteInfo[i].url}" target="_blank">
                     <i class="fa-solid fa-eye pe-2"></i>
                     Visit
                 </a>
